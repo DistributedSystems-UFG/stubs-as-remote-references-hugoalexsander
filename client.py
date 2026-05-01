@@ -7,7 +7,7 @@ class Client:
 		self.host = 'localhost'								 # this machine
 		self.port = port											 # port it will listen to
 		self.sock = socket()									 # socket for incoming calls
-		self.sock.bind((self.host, self.port)) # bind socket to an address
+		self.sock.bind(('', self.port)) # bind socket to an address
 		self.sock.listen(2)										 # max num connections
 
 	def sendTo(self, host, port, data):
